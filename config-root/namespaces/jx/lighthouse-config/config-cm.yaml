@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         ajishasb/jenkins: true
+        ajishasb/sampleproject: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         ajishasb/jenkins: merge
+        ajishasb/sampleproject: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - ajishasb/jenkins
+        - ajishasb/sampleproject
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - ajishasb/jenkins
+        - ajishasb/sampleproject
       target_url: http://lighthouse.jx./merge/status
 kind: ConfigMap
 metadata:
