@@ -6,6 +6,18 @@ data:
       repos:
       - ajishasb/jenkins
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - ajishasb/sample1
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - ajishasb/sample2
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - ajishasb/sampleproject
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +33,21 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      ajishasb/sample1:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      ajishasb/sample2:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      ajishasb/sampleproject:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +55,54 @@ data:
     plugins:
       ajishasb/jenkins:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      ajishasb/sample1:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      ajishasb/sample2:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      ajishasb/sampleproject:
       - approve
       - assign
       - blunderbuss
@@ -55,6 +130,17 @@ data:
     - repos:
       - ajishasb/jenkins
       trusted_org: todo
+    - repos:
+      - ajishasb/sample1
+      trusted_org: todo
+    - repos:
+      - ajishasb/sample2
+      trusted_org: todo
+    - repos:
+      - ajishasb/sampleproject
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
