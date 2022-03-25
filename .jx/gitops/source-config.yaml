@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: sample1
+    - name: sample2
     - name: sampleproject
     scheduler: in-repo
   slack:
