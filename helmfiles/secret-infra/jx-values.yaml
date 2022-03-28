@@ -34,9 +34,11 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: ajishasb
+    repository: jenkins
   - key: staging
   ingress:
-    domain: change.me
+    domain: 38.91.101.18.nip.io
     ignoreLoadBalancer: true
     kind: ingress
     namespaceSubDomain: .secret-infra.
@@ -44,10 +46,12 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: ajishasb
   repository: bucketrepo
   secretStorage: vault
   vault:
-    url: 127.0.0.1:8200
+    url: http://tuser-virtual-machine:8200
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
   enabled: false
