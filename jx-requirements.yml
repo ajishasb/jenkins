@@ -20,7 +20,7 @@ spec:
   - key: dev
   - key: staging
   ingress:
-    domain: ""
+    domain: "38.91.101.18.nip.io"
     externalDNS: false
     ignoreLoadBalancer: true
     kind: ingress
