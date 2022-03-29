@@ -7,8 +7,6 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
-        ajishasb/122334: true
-        ajishasb/io: true
         ajishasb/jenkins: true
     plank: {}
     pod_namespace: jx
@@ -21,8 +19,6 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
-        ajishasb/122334: merge
-        ajishasb/io: merge
         ajishasb/jenkins: merge
       queries:
       - labels:
@@ -35,8 +31,6 @@ data:
         - needs-rebase
         repos:
         - ajishasb/jenkins
-        - ajishasb/122334
-        - ajishasb/io
       - labels:
         - updatebot
         missingLabels:
@@ -47,8 +41,6 @@ data:
         - needs-rebase
         repos:
         - ajishasb/jenkins
-        - ajishasb/122334
-        - ajishasb/io
       target_url: http://lighthouse.jx.38.91.101.18.nip.io/merge/status
 kind: ConfigMap
 metadata:
