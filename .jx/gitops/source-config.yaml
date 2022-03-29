@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: "122334"
+    - name: io
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
